@@ -18,16 +18,20 @@ window.onload = function() {
     game.onload = function() { // ゲームの準備が整ったらメインの処理を実行します。
 
         //クマの画像生成
-        
+        createKuma(game);
 
         //クマ（メス）の画像生成
-        
+        createGirlKuma(game);
 
         //クマ（白）の画像生成
-        
+        createWhiteKuma(game);
 
         //木の生成
-        
+        for(var i=0; i<15; i++){
+             createWood(game);
+        }
+       
+       
 
         //背景色
         game.rootScene.backgroundColor = '#CCFFFF';
@@ -46,7 +50,7 @@ window.onload = function() {
             count++;
             if(count%fps == 0){
                 //1秒間に1回の処理
-                
+                time = time - 1;
             }
 
             //時間の更新
